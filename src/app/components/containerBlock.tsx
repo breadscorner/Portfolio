@@ -1,62 +1,41 @@
-"use client";
+import React from 'react';
+import Head from 'next/head';
 
-import React, { ReactNode } from "react";
-import Head from "next/head";
-import Navbar from "./navBar";
-import Footer from "./footer";
-
-type ContainerBlockProps = {
-  children: ReactNode;
+interface ContainerBlockProps {
+  children: React.ReactNode;
   title: string;
   description: string;
   image?: string;
-};
+}
 
-export const ContainerBlock: React.FC<ContainerBlockProps> = ({
+const ContainerBlock: React.FC<ContainerBlockProps> = ({
   children,
   title,
   description,
-  image = "/avatar.png",
+  image = 'defaultImage.jpg', // Provide a default image path
 }) => {
-  const meta = {
-    title,
-    description,
-    image,
-    type: "website",
-    url: "https://brettgill.io",
-  };
+  const baseURL = 'https://brettgill.io';
 
   return (
     <div>
       <Head>
-        <title>{meta.title}</title>
-        <meta name="description" content={meta.description} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={`${baseURL}/${image}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={baseURL} />
 
-        {/* Standard SEO */}
-        <meta name="robots" content="follow, index" />
-        <link rel="canonical" href={meta.url} />
-
-        {/* Open Graph / Facebook / LinkedIn */}
-        <meta property="og:type" content={meta.type} />
-        <meta property="og:url" content={meta.url} />
-        <meta property="og:title" content={meta.title} />
-        <meta property="og:description" content={meta.description} />
-        <meta property="og:image" content={meta.image} />
-
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={meta.url} />
-        <meta property="twitter:title" content={meta.title} />
-        <meta property="twitter:description" content={meta.description} />
-        <meta property="twitter:image" content={meta.image} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={`${baseURL}/${image}`} />
+        {/* More SEO tags as needed */}
       </Head>
-
-      <main className="dark:bg-gray-800 w-full">
-        <Navbar />
-        <div>
-          {children}
-        </div>
-      </main>
+      {children}
     </div>
   );
 };
+
+export default ContainerBlock;

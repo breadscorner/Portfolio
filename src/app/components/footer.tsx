@@ -1,7 +1,9 @@
+import styles from '../style-modules/footer.module.css';
+
 export default function Footer() {
   return (
-    <div className="flex items-center justify-center w-full h-24 border-t dark:border-gray-700">
-      <p className="text-gray-500 text-center">
+    <div className={styles['footer-container']}>
+      <p className={styles['footer-text']}>
         Copyright &copy; 2023
         <br />
         Created By LMNT Application Development
