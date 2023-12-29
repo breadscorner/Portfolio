@@ -19,8 +19,19 @@ body {
   ) rgb(var(--background-start-rgb));
 }
 
+/* Dark mode styles */
 .dark {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
+}
+
+/* Example of applying dark mode styles */
+.dark body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  ) rgb(var(--background-start-rgb));
 }

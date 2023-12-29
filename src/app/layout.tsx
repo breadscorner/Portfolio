@@ -9,17 +9,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
-      <Head>
-        <title>Brett Gill&apos;s Portfolio</title>
-        <meta name="description" content="Brett Gill's Portfolio" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div>
+    <html lang="en">
+      <body>
         <NavBar />
-        <div>{children}</div>
+        {children}
         <Footer />
-      </div>
-    </>
+      </body>
+    </html>
   );
 }

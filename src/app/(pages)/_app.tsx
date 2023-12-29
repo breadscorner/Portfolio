@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'next-themes';
 import RootLayout from '../layout';
-import '../styles/globals.css';
+import '../globals.css';
 
 export default function MyApp({ Component, pageProps }: any) {
   return (
