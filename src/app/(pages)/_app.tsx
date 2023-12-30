@@ -2,9 +2,9 @@ import { ThemeProvider } from 'next-themes';
 import RootLayout from '../layout';
 import '../globals.css';
 
-export default function MyApp({ Component, pageProps }: any) {
+export default async function MyApp({ Component, pageProps }: any) {
   return (
-    <ThemeProvider attribute="class" enableSystem={true} defaultTheme="system">
+    <ThemeProvider attribute="class" defaultTheme="light">
       <RootLayout>
         <Component {...pageProps} />
       </RootLayout>

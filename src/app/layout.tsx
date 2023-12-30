@@ -1,7 +1,8 @@
-import Head from "next/head";
 import React from "react";
 import Footer from "./components/footer";
 import NavBar from "./components/navigation/navBar";
+
+import "./globals.css";
 
 export default function RootLayout({
   children,

@@ -5,33 +5,37 @@
 
 /* Light mode styles */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgb(var(--background-end-rgb))
-  ) rgb(var(--background-start-rgb));
+  --foreground-color: #000; /* Black */
+  --background-color: #fff; /* White */
+  --h1-text-color: #1a202c; /* Dark Slate Gray - for light mode */
 }
 
 /* Dark mode styles */
 .dark {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
+  --foreground-color: #fff; /* White */
+  --background-color: #2d3748; /* Navy Blue - for dark mode background */
+  --h1-text-color: #63b3ed; /* Light Sky Blue - for dark mode H1 text */
 }
 
-/* Example of applying dark mode styles */
-.dark body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgb(var(--background-end-rgb))
-  ) rgb(var(--background-start-rgb));
+body {
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+}
+
+/* Apply base styles for H1 - these styles will be common across light/dark modes */
+h1 {
+  color: var(--h1-text-color);
+  font-size: 3rem; /* Adjust size accordingly */
+  line-height: 1.2; /* Adjust line height for better readability */
+  font-weight: 700; /* Bold font weight for headings */
+  margin: 0.67em 0; /* Provide top and bottom margin to separate from other content */
+  text-transform: uppercase; /* Uppercase text - remove if not desired */
+  letter-spacing: 0.05em; /* Adjust letter spacing to your preference */
+}
+
+/* Additional responsive typography for H1 can be defined using Tailwind's responsive modifiers or regular media queries */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 4rem; /* Larger font size for wider screens */
+  }
 }
