@@ -1,35 +1,22 @@
-'use'
+'use client'
 
-import React, { useEffect, useState } from 'react';
-import { useTheme } from 'next-themes';
+import React from "react";
+import { useTheme } from "next-themes";
 
 const ThemeButton = () => {
-const { theme, setTheme } = useTheme();
-const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
-// After mounting, we have access to the theme
-useEffect(() => {
- setMounted(true);
-}, []);
+  console.log('Theme:', theme);
 
-// Avoid showing the button until we know the current theme to prevent flickering
-if (!mounted) {
- return null;
-}
-
-// Function to toggle theme, which checks if the theme is dark or light
-// and then sets the theme to the opposite state.
-const toggleTheme = () => {
- const nextTheme = theme === 'dark' ? 'light' : 'dark';
- setTheme(nextTheme);
- console.log(`Switched to ${nextTheme} mode`);
-};
-
-return (
- <button onClick={toggleTheme} aria-label="Toggle Theme">
-   {theme === 'light' ? 'Light Mode' : 'Dark Mode'}
- </button>
-);
+  return (
+    <div className="h-9 w-9 flex rounded-full md:p-0 ml-2 text-white bg-gray-800">
+      <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+        {theme === "dark" ? <p>Light</p> : <p>Dark</p>}
+      </button>
+    </div>
+  );
 };
 
 export default ThemeButton;
+
+
