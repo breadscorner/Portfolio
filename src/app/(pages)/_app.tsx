@@ -1,15 +1,15 @@
 import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider } from "next-themes";
-import RootLayout from "../layout";
+import Layout from "../layout";
 import "../globals.css";
 
 export default function MyApp({ Component, pageProps }: any) {
   return (
     <NextUIProvider>
       <ThemeProvider attribute="class" enableSystem={true} defaultTheme="dark">
-        <RootLayout>
+        <Layout>
           <Component {...pageProps} />
-        </RootLayout>
+        </Layout>
       </ThemeProvider>
     </NextUIProvider>
   );
