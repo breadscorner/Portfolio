@@ -1,6 +1,8 @@
 import React from "react";
+
 import Footer from "./components/footer";
 import NavBar from "./components/navigation/navBar";
+import { menuItems } from "./components/navigation/navBar";
 
 // Without this import, the Tailwind styles will not be applied
 import "./globals.css";
@@ -12,8 +14,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="flex flex-col min-h-screen">
-        <NavBar />
+      <body className="flex flex-col mt-1 h-[100dvh]">
+      <NavBar />
         <div className="flex-1">
           {children}
         </div>
@@ -24,4 +26,3 @@ export default function RootLayout({
     </html>
   );
 }
-  

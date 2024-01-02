@@ -1,25 +1,45 @@
 "use client";
 
+// Import necessary modules
 import { useState } from "react";
 import Link from "next/link";
-import ThemeButton from "./themeButton";
 import Image from "next/image";
+import ThemeButton from "./themeButton";
 
+// Define menu items
+export const menuItems = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/projects", label: "Projects" },
+  { href: "/contact", label: "Contact" },
+];
+
+// NavBar component
 export default function NavBar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
+  
+  // Handle link clicks for programmatic navigation
+  const handleLinkClick = (href: string) => {
+    if (window.location.pathname === href) {
+      toggleMenu(); 
+    } else {
+      window.location.href = href;
+    }
+  };
+  
 
   return (
-    <div className="py-4 px-4">
+    <div className="mt-[0.5rem]">
       <div className="flex justify-between items-center w-full">
         <div className="md:hidden flex items-center space-x-4 w-full">
           {/* Hamburger menu icon for small screens */}
           <button onClick={toggleMenu}>
             <svg
-              className="w-8 h-8 mr-2"
+              className="w-8 h-8"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -33,6 +53,7 @@ export default function NavBar() {
               ></path>
             </svg>
           </button>
+
           {/* Image centered for small screens */}
           <div className="flex items-center w-full">
             <Image
@@ -43,10 +64,13 @@ export default function NavBar() {
               className="mx-auto"
             />
           </div>
+
           {/* ThemeButton for smaller screens */}
           <ThemeButton />
         </div>
+
         <div className="hidden md:flex items-center space-x-4 w-full">
+
           {/* Image for larger screens */}
           <div className="flex items-center">
             <Image
@@ -56,25 +80,30 @@ export default function NavBar() {
               height={100}
             />
           </div>
+
           {/* Navigation links for larger screens */}
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/projects">Projects</Link>
-          <Link href="/contact">Contact</Link>
+          {menuItems.map((item, index) => (
+            <Link key={index} href={item.href} onClick={() => handleLinkClick(item.href)}>
+              {item.label}
+            </Link>
+          ))}
+
           {/* Spacer to push ThemeButton to the right */}
           <div className="flex-grow"></div>
+
           {/* ThemeButton for larger screens */}
           <ThemeButton />
         </div>
+
+        {/* Mobile menu */}
         {isMenuOpen && (
           <div className="lg:hidden fixed inset-0 flex items-center justify-center">
+
             {/* Mobile menu */}
             <div className="flex bg-white justify-center rounded-lg shadow-md w-full h-full items-center">
+              
               {/* Close button */}
-              <button
-                className="absolute top-2 right-2 p-2"
-                onClick={toggleMenu}
-              >
+              <button className="absolute top-2 right-2 p-2" onClick={toggleMenu}>
                 <svg
                   className="w-8 h-8 text-gray-600"
                   fill="currentColor"
@@ -93,19 +122,14 @@ export default function NavBar() {
                   ></path>
                 </svg>
               </button>
+
+              {/* Navigation links */}
               <div className="flex flex-col items-center space-y-10">
-                <Link href="/" onClick={toggleMenu}>
-                  Home
-                </Link>
-                <Link href="/about" onClick={toggleMenu}>
-                  About
-                </Link>
-                <Link href="/projects" onClick={toggleMenu}>
-                  Projects
-                </Link>
-                <Link href="/contact" onClick={toggleMenu}>
-                  Contact
-                </Link>
+                {menuItems.map((item, index) => (
+                  <Link key={index} href={item.href} onClick={() => handleLinkClick(item.href)}>
+                    {item.label}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
@@ -113,4 +137,4 @@ export default function NavBar() {
       </div>
     </div>
   );
-        }  
+}

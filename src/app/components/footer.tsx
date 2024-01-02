@@ -6,7 +6,7 @@ export default function Footer() {
       <p className={styles['footer-text']}>
         Copyright &copy; 2023
         <br />
-        Created By LMNT Application Development
+        By LMNT Application Development
         <br />
         All Rights Reserved
       </p>

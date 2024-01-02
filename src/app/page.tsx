@@ -2,7 +2,10 @@
 
 "use client";
 
+// React Imports
 import { useState, useCallback } from "react";
+
+// Next Imports
 import Head from "next/head";
 import Image from "next/image";
 
@@ -19,7 +22,7 @@ export default function HomePage() {
     const offsetX = ev.clientX - rect.left;
     const offsetY = ev.clientY - rect.top;
 
-    // Check if the screen width is below a certain threshold (e.g., 600px)
+    // Check if the screen width is below a certain threshold
     const isMobile = window.innerWidth <= 600;
 
     // Adjust the rotation values based on the device type
