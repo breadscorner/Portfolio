@@ -55,14 +55,16 @@ export default function NavBar() {
           </button>
 
           {/* Image centered for small screens */}
-          <div className="flex items-center w-full">
-            <Image
+          <div className="flex items-center justify-center w-full">
+            <Link href="/">
+              <Image
               src="/brett-logo.png"
               alt="Brett Logo"
               width={75}
               height={75}
               className="mx-auto"
             />
+            </Link>
           </div>
 
           {/* ThemeButton for smaller screens */}
@@ -73,12 +75,14 @@ export default function NavBar() {
 
           {/* Image for larger screens */}
           <div className="flex items-center">
+            <Link href="/">
             <Image
               src="/brett-logo.png"
               alt="Brett Logo"
               width={100}
               height={100}
             />
+            </Link>
           </div>
 
           {/* Navigation links for larger screens */}
