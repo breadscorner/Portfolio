@@ -67,7 +67,7 @@ h2 {
 
 /* Projects Page */
 .projects-container {
-  max-width: 800px;
+  max-width: 75vw;
   margin: auto;
   padding: 20px;
 }
@@ -81,8 +81,12 @@ h2 {
 .project-title {
   font-size: 24px;
   margin-bottom: 20px;
-  color: blue;
-  text-decoration: underline;
+  transition: font-size 0.3s ease;
+}
+
+.project-title:hover {
+  font-size: 28px;
+  color:darkblue
 }
 
 .project-description,
