@@ -1,0 +1,40 @@
+[
+  {
+    "title": "Hark | Twitter Clone",
+    "description": "Project 1 description"
+  },
+  {
+    "title": "ProspectiveAI | Scholarship Navigator",
+    "description": "Project 2 description",
+    "technologies": [
+      "React",
+      "Next.js",
+      "Langchain",
+      "OpenAi",
+      "SerpApi",
+      "NeonDb",
+      "DrizzleOrm",
+      "NextAuth"
+    ]
+  },
+  {
+    "title": "Crabby's | Banking Application",
+    "description": "Project 3 description",
+    "technologies": [
+      "C#(Asp.net)",
+      "CSS",
+      "DB Browser",
+      "Visual Studio",
+      "Microsoft Azure"
+    ]
+  },
+  {
+    "title": "TravelMeet | Social Media",
+    "description": "Project 4 description",
+    "technologies": [
+      "Express.js",
+      "Node.js",
+      "TailwindCSS"
+    ]
+  }
+]

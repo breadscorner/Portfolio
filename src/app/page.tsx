@@ -4,13 +4,13 @@
 import React from "react";
 import ThreeDComponent from "./(pages)/home/three-d";
 
+// Next Imports
+import Image from "next/image";
+
 export const metadata: Metadata = {
   title: "Brett Gill | Home",
   description: "Full Stack Web Developer",
 };
-
-// Next Imports
-import Image from "next/image";
 
 export default function HomePage(): React.FC {
   return (
