@@ -20,7 +20,7 @@
 body {
   background-color: var(--background-color);
   color: var(--foreground-color);
-  margin: 1.5rem;
+  margin: 1rem;
 }
 
 h1 {
@@ -62,6 +62,47 @@ h2 {
   height: 50%;
   justify-content: center;
   text-align: center;
-  /* border: 1px solid; */
   transform: rotateX(0) rotateY(0);
+}
+
+/* Projects Page */
+.projects-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.project-section {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.project-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: blue;
+  text-decoration: underline;
+}
+
+.project-description,
+.project-overview,
+.project-background,
+.project-note {
+  margin-bottom: 20px;
+}
+
+.project-features,
+.project-tech-stack,
+.project-get-started,
+.project-technologies {
+  list-style-type: none;
+  padding: 0;
+}
+
+.project-features li,
+.project-tech-stack li,
+.project-get-started li,
+.project-technologies li {
+  margin-bottom: 10px;
 }

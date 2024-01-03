@@ -1,40 +1,73 @@
 [
   {
     "title": "Hark | Twitter Clone",
-    "description": "Project 1 description"
-  },
-  {
-    "title": "ProspectiveAI | Scholarship Navigator",
-    "description": "Project 2 description",
+    "overview": "",
+    "background": "",
+    "features": [],
     "technologies": [
       "React",
       "Next.js",
-      "Langchain",
-      "OpenAi",
-      "SerpApi",
       "NeonDb",
       "DrizzleOrm",
+      "TailwindCSS",
       "NextAuth"
-    ]
+    ],    
+    "getStarted": [],
+    "note": ""
+  },
+  {
+    "title": "ProspectiveAI | Scholarship Navigator",
+    "overview": "ProspectiveAI is an AI driven scholarship navigator designed to consolidate and simplify the design process.",
+    "background": "ProspectiveAI was featured at the Annual Student Innovation Design & Development Technology Showcase at BCIT, attracting attention from industry professionals and local politicians, showcasing the seamless fusion of technological innovation and creative design.",
+    "features": [
+      "Curated Scholarships: Explore a diverse range of popular scholarships on our homepage for a broad starting point.",
+      "Smart Search: Utilizing Langchain and OpenAI, we employ intelligent algorithms to scour the web and present scholarships in a structured format.",
+      "Tailored Recommendations: Fill out a simple form, and ProspectiveAI will guide you to scholarships you're eligible for.",
+      "Save for Later: Easily save scholarships of interest to your profile with a single click.",
+      "Track Applications: Manage your application process by marking scholarships as applied on your profile.",
+      "GitHub Integration: Securely log in with your GitHub account to access your saved and applied scholarships."
+    ],
+    "technologies": [
+      "Drizzle ORM & Neon Database: Manage and query scholarship data with speed and flexibility.",
+      "Langchain & OpenAI: Drive our intelligent search and recommendation engine.",
+      "SerpAPI: Fetch real-time, structured search data from the web.",
+      "React & Next.js: Craft a fast, user-friendly frontend.",
+      "NextAuth: GitHub integration for secure profile access."
+    ],
+    "getStarted": [
+      "Visit the homepage to explore popular scholarships.",
+      "Use the form to get personalized recommendations.",
+      "Save and manage scholarships on your profile page."
+    ],
+    "note": "GitHub login required for profile access."
   },
   {
     "title": "Crabby's | Banking Application",
-    "description": "Project 3 description",
+    "overview": "",
+    "background": "",
+    "features": [],
     "technologies": [
       "C#(Asp.net)",
       "CSS",
       "DB Browser",
       "Visual Studio",
       "Microsoft Azure"
-    ]
+    ],  
+    "getStarted": [],
+    "note": ""
+
   },
   {
     "title": "TravelMeet | Social Media",
-    "description": "Project 4 description",
+    "overview": "",
+    "background": "",
+    "features": [],
     "technologies": [
       "Express.js",
       "Node.js",
       "TailwindCSS"
-    ]
+    ],    
+    "getStarted": [],
+    "note": ""
   }
 ]
