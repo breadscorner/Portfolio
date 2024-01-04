@@ -1,20 +1,22 @@
-'use client'
+"use client";
 
-import React from "react";
-import { useTheme } from "next-themes";
+import {useTheme} from "next-themes";
+import { useEffect, useState } from "react";
 
-const ThemeButton = () => {
-  const { theme, setTheme } = useTheme();
+export default function ThemeButton() {
+  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme } = useTheme()
 
-  // console.log('Theme:', theme);
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if(!mounted) return null
 
   return (
-    <div className="h-8 w-8 flex rounded-full md:p-0 ml-2 text-white bg-gray-800">
-      <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-        {theme === "dark" ? <p>Light</p> : <p>Dark</p>}
-      </button>
+    <div>
+      <button onClick={() => setTheme('light')}>Light Mode</button>
+      <button onClick={() => setTheme('dark')}>Dark Mode</button>
     </div>
-  );
+  )
 };
-
-export default ThemeButton;

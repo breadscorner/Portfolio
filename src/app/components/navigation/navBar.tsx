@@ -4,8 +4,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import ThemeButton from "./themeButton";
-
+import ThemeButton from './themeButton'
 // Define menu items
 export const menuItems = [
   { href: "/", label: "Home" },
