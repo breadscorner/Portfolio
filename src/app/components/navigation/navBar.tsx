@@ -19,13 +19,14 @@ export const menuItems = [
 export default function NavBar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const { resolvedTheme } = useTheme();
-  const [logoSrc, setLogoSrc] = useState('');
 
-  useEffect(() => {
-    // Update logoSrc when the theme is resolved
-    setLogoSrc(resolvedTheme === 'dark' ? '/brett-logo-dark.png' : '/brett-logo-light.png');
-  }, [resolvedTheme]);
+  let logoSrc = '/brett-logo-dark.png';
 
+  // Update logoSrc based on the resolved theme
+  if (resolvedTheme === 'light') {
+    logoSrc = '/brett-logo-light.png';
+  }
+  
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
