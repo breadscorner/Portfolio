@@ -65,6 +65,11 @@ h2 {
   transform: rotateX(0) rotateY(0);
 }
 
+/* Nav bar */
+.dark .image {
+  color: white;
+}
+
 /* Projects Page */
 .projects-container {
   max-width: 75vw;
@@ -86,8 +91,13 @@ h2 {
 
 .project-title:hover {
   font-size: 28px;
-  color:darkblue
+  color: darkblue;
 }
+
+.dark .project-title:hover {
+  color: #63b3ed;
+}
+
 
 .project-description,
 .project-overview,

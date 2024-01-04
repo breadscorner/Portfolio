@@ -14,6 +14,9 @@ dependencies:
   next-themes:
     specifier: ^0.2.1
     version: 0.2.1(next@14.0.4)(react-dom@18.2.0)(react@18.2.0)
+  next-ui:
+    specifier: ^0.9.0
+    version: 0.9.0
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -4199,6 +4202,10 @@ packages:
       next: 14.0.4(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /next-ui@0.9.0:
+    resolution: {integrity: sha512-RWZ5R6PKDIFhxP4d6OaoYJTerW+5/yzoIO3cPqUS8dx+5Q3tfv1YDBrwEHc46Kd2lZL+dmJWocJdquFXSgdOow==}
     dev: false
 
   /next@14.0.4(react-dom@18.2.0)(react@18.2.0):

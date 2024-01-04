@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage(): React.FC {
+
   return (
     <div>
       <div>
@@ -22,7 +23,7 @@ export default function HomePage(): React.FC {
         </div>
         <ThreeDComponent>
           <div className="flex justify-center items-center">
-            <Image src="/brett-logo.png" alt="Brett Logo" width={175} height={175} />
+            <Image src="/brett-logo-light.png" alt="Brett Logo" width={175} height={175} />
           </div>
         </ThreeDComponent>
       </div>

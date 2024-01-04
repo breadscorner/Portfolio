@@ -5,6 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ThemeButton from "./themeButton";
+import { useTheme } from "next-themes";
 
 // Define menu items
 export const menuItems = [
@@ -18,6 +19,9 @@ export const menuItems = [
 export default function NavBar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
+  const { theme } = useTheme();
+  const logoSrc = theme === 'dark' ? '/brett-logo-dark.png' : '/brett-logo-light.png';
+
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
@@ -30,7 +34,6 @@ export default function NavBar() {
       window.location.href = href;
     }
   };
-  
 
   return (
     <div className="mt-[0.5rem]">
@@ -58,7 +61,7 @@ export default function NavBar() {
           <div className="flex items-center justify-center w-full">
             <Link href="/">
               <Image
-              src="/brett-logo.png"
+              src={logoSrc}
               alt="Brett Logo"
               width={75}
               height={75}
@@ -77,7 +80,7 @@ export default function NavBar() {
           <div className="flex items-center">
             <Link href="/">
             <Image
-              src="/brett-logo.png"
+              src={logoSrc}
               alt="Brett Logo"
               width={100}
               height={100}
