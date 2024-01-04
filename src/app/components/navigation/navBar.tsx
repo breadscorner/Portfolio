@@ -1,7 +1,7 @@
-"use client";
+'use client'
 
 // Import necessary modules
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ThemeButton from "./themeButton";
@@ -18,18 +18,21 @@ export const menuItems = [
 // NavBar component
 export default function NavBar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const { resolvedTheme } = useTheme();
+  const [logoSrc, setLogoSrc] = useState('');
 
-  const { theme } = useTheme();
-  const logoSrc = theme === 'dark' ? '/brett-logo-dark.png' : '/brett-logo-light.png';
+  useEffect(() => {
+    // Update logoSrc when the theme is resolved
+    setLogoSrc(resolvedTheme === 'dark' ? '/brett-logo-dark.png' : '/brett-logo-light.png');
+  }, [resolvedTheme]);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
-  
-  // Handle link clicks for programmatic navigation
-  const handleLinkClick = (href: string) => {
+
+  const handleLinkClick = (href: any) => {
     if (window.location.pathname === href) {
-      toggleMenu(); 
+      toggleMenu();
     } else {
       window.location.href = href;
     }
@@ -61,12 +64,11 @@ export default function NavBar() {
           <div className="flex items-center justify-center w-full">
             <Link href="/">
               <Image
-              src={logoSrc}
-              alt="Brett Logo"
-              width={75}
-              height={75}
-              className="mx-auto"
-            />
+                src={logoSrc}
+                alt="Brett Logo"
+                width={75}
+                height={75}
+              />
             </Link>
           </div>
 
@@ -75,16 +77,15 @@ export default function NavBar() {
         </div>
 
         <div className="hidden md:flex items-center space-x-4 w-full">
-
           {/* Image for larger screens */}
           <div className="flex items-center">
             <Link href="/">
-            <Image
-              src={logoSrc}
-              alt="Brett Logo"
-              width={100}
-              height={100}
-            />
+              <Image
+                src={logoSrc}
+                alt="Brett Logo"
+                width={100}
+                height={100}
+              />
             </Link>
           </div>
 
@@ -105,10 +106,8 @@ export default function NavBar() {
         {/* Mobile menu */}
         {isMenuOpen && (
           <div className="lg:hidden fixed inset-0 flex items-center justify-center">
-
             {/* Mobile menu */}
             <div className="flex bg-white justify-center rounded-lg shadow-md w-full h-full items-center">
-              
               {/* Close button */}
               <button className="absolute top-2 right-2 p-2" onClick={toggleMenu}>
                 <svg
