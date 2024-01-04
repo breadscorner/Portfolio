@@ -22,12 +22,12 @@ export default function Projects() {
       <h1>Projects</h1>
       <div className="projects-container">
         {projectsData.map((project: any, index: any) => (
-          <section key={index} className="project-section">
+          <section key={index} className={`mb-[1.25rem] pb-[1.25rem] ${index < projectsData.length -1 ? 'border-b-2 border-[#ccc]' :''}`}>
             <Link href="https://vercel-prospective-three.vercel.app/">
             <h2 className="project-title">
               <strong>{project.title}</strong>
             </h2>
-</Link>
+            </Link>
             {project.overview && (
               <p className="project-overview">{project.overview}</p>
             )}

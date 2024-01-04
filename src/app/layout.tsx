@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="flex flex-col mt-1 h-[100dvh]">
+      <body className="flex flex-col container mx-auto mt-1 h-[100dvh]">
       <NavBar />
         <div className="flex-1">
           {children}

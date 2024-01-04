@@ -67,9 +67,7 @@ h2 {
 
 /* Projects Page */
 .projects-container {
-  max-width: 75vw;
   margin: auto;
-  padding: 20px;
 }
 
 .project-section {
