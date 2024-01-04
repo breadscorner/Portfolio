@@ -1,7 +1,7 @@
 'use client'
 
 // Import necessary modules
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ThemeButton from "./themeButton";
@@ -26,7 +26,7 @@ export default function NavBar() {
   if (resolvedTheme === 'light') {
     logoSrc = '/brett-logo-light.png';
   }
-  
+
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };

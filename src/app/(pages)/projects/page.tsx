@@ -24,26 +24,26 @@ export default function Projects() {
         {projectsData.map((project: any, index: any) => (
           <section
             key={index}
-            className={`project-section mb-5 pb-5 ${
+            className={`mb-10 pb-10 ${
               index < projectsData.length - 1
                 ? "border-b-2 border-gray-300"
                 : ""
             }`}
           >
-            <Link href="https://vercel-prospective-three.vercel.app/">
-              <h2 className="project-title">
+            <Link href={project.url}>
+              <h2 className="project-title mb-8">
                 <strong>{project.title}</strong>
               </h2>
             </Link>
             {project.overview && (
-              <p className="project-overview">{project.overview}</p>
+              <p className="project-overview mb-8">{project.overview}</p>
             )}
             {project.background && (
-              <p className="project-background">{project.background}</p>
+              <p className="project-background mb-8">{project.background}</p>
             )}
 
             {project.features && (
-              <ul className="project-features">
+              <ul className="project-features mb-8">
                 {project.features.map((feature: any, featureIndex: any) => (
                   <li key={featureIndex}>{makeTextBeforeColonBold(feature)}</li>
                 ))}
@@ -51,7 +51,7 @@ export default function Projects() {
             )}
 
             {project.technologies && (
-              <ul className="project-technologies">
+              <ul className="project-technologies mb-8">
                 {project.technologies.map((tech: any, techIndex: any) => (
                   <li key={techIndex}>{makeTextBeforeColonBold(tech)}</li>
                 ))}
@@ -59,7 +59,7 @@ export default function Projects() {
             )}
 
             {project.getStarted && (
-              <ul className="project-get-started">
+              <ul className="project-get-started mb-8">
                 {project.getStarted.map((step: any, stepIndex: any) => (
                   <li key={stepIndex}>{makeTextBeforeColonBold(step)}</li>
                 ))}

@@ -77,15 +77,8 @@ h2 {
   padding: 20px;
 }
 
-.project-section {
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 20px;
-}
-
 .project-title {
   font-size: 24px;
-  margin-bottom: 20px;
   transition: font-size 0.3s ease;
 }
 
@@ -96,14 +89,6 @@ h2 {
 
 .dark .project-title:hover {
   color: #63b3ed;
-}
-
-
-.project-description,
-.project-overview,
-.project-background,
-.project-note {
-  margin-bottom: 20px;
 }
 
 .project-features,
