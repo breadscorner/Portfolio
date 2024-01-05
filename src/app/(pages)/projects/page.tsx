@@ -30,12 +30,12 @@ export default function Projects() {
                 : ""
             }`}
           >
-            <Link href={project.url}>
+            <Link href={project.url} target="_blank" rel="noopener noreferrer">
               <h2 className="project-title mb-8">
                 <strong>{project.title}</strong>
               </h2>
             </Link>
-            {project.overview && (
+            {/* {project.overview && (
               <p className="project-overview mb-8">{project.overview}</p>
             )}
             {project.background && (
@@ -66,7 +66,7 @@ export default function Projects() {
               </ul>
             )}
 
-            {project.note && <p className="project-note">{project.note}</p>}
+            {project.note && <p className="project-note">{project.note}</p>} */}
           </section>
         ))}
       </div>
