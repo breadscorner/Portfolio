@@ -19,8 +19,8 @@ export default function ThemeButton() {
         <button onClick={() => setTheme("dark")}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            height="1.5rem"
-            width="1.5rem"
+            height="2rem"
+            width="2rem"
             viewBox="0 0 512 512"
             style={{ fill: "000" }}
           >
@@ -33,8 +33,8 @@ export default function ThemeButton() {
         <button onClick={() => setTheme("light")}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            height="1.5rem"
-            width="1.5rem"
+            height="2rem"
+            width="2rem"
             viewBox="0 0 384 512"
             style={{ fill: "#fff" }}
           >

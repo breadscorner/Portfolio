@@ -2,6 +2,7 @@
   {
     "title": "Hark | Twitter Clone",
     "url": "",
+    "image": "hark.jpeg",
     "overview": "Hark is a Twitter clone built with React and Next.js, designed to provide a familiar Twitter-like experience.",
     "background": "The development of Hark was part of the learning journey in a BCIT Full Stack Web Development diploma term three course. The aim was to apply knowledge acquired from each lesson in the curriculum, resulting in a Twitter clone that offers a familiar user experience.",
     "features": [
@@ -29,6 +30,7 @@
   {
     "title": "ProspectiveAI | Scholarship Navigator",
     "url": "https://vercel-prospective-three.vercel.app/",
+    "image": "prospective.jpeg",
     "overview": "ProspectiveAI is an AI driven scholarship navigator designed to consolidate and simplify the design process.",
     "background": "ProspectiveAI was featured at the Annual Student Innovation Design & Development Technology Showcase at BCIT, attracting attention from industry professionals and local politicians, showcasing the seamless fusion of technological innovation and creative design.",
     "features": [
@@ -54,8 +56,9 @@
     "note": "GitHub login required for profile access."
   },
   {
-    "title": "Crabby's | Banking Application",
+    "title": "Crabby's | Bank Application",
     "url": "",
+    "image": "crabbys.jpeg",
     "overview": "",
     "background": "",
     "features": [],
@@ -73,6 +76,7 @@
   {
     "title": "TravelMeet | Social Media",
     "url": "",
+    "image": "travelmeet.jpeg",
     "overview": "",
     "background": "",
     "features": [],

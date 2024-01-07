@@ -6,7 +6,7 @@ const LoadingSpinner: React.FC = () => {
   return (
     <div className="loading-spinner">
       <Image 
-      src="/brett-logo-light.png" 
+      src="/brett-logo-dark.png" 
       alt="Logo Spinner" 
       width={100}
       height={100}

@@ -40,13 +40,13 @@ export default function NavBar() {
   };
 
   return (
-    <div className="mt-[0.5rem]">
+    <div className="mt-[0.25rem] mx-5">
       <div className="flex justify-between items-center w-full">
         <div className="md:hidden flex items-center space-x-4 w-full">
           {/* Hamburger menu icon for small screens */}
           <button onClick={toggleMenu}>
             <svg
-              className="w-8 h-8"
+              className="w-[2rem] h-[2rem]"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
