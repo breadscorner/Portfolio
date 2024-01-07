@@ -1,7 +1,7 @@
 [
   {
     "title": "Hark | Twitter Clone",
-    "url": "",
+    "url": "https://hark-twitter-clone-c5a9bvjh9-awarewear.vercel.app/",
     "image": "hark.jpeg",
     "overview": "Hark is a Twitter clone built with React and Next.js, designed to provide a familiar Twitter-like experience.",
     "background": "The development of Hark was part of the learning journey in a BCIT Full Stack Web Development diploma term three course. The aim was to apply knowledge acquired from each lesson in the curriculum, resulting in a Twitter clone that offers a familiar user experience.",
@@ -28,7 +28,7 @@
     "note": "Some features are currently for aesthetics only. Hark aims to provide users with a Twitter-like experience, offering engagement options, saved posts, post creation, search functionality, and user profiles."
     },
   {
-    "title": "ProspectiveAI | Scholarship Navigator",
+    "title": "ProspectiveAI | Scholarship App",
     "url": "https://vercel-prospective-three.vercel.app/",
     "image": "prospective.jpeg",
     "overview": "ProspectiveAI is an AI driven scholarship navigator designed to consolidate and simplify the design process.",
