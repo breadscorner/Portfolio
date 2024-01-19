@@ -8,8 +8,7 @@ import ThreeDComponent from "./(pages)/home/three-d";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Brett Gill | Home",
-  description: "Full Stack Web Developer",
+  title: "Brett Gill | Home"
 };
 
 export default function HomePage(): React.FC {
