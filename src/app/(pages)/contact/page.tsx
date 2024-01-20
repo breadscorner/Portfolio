@@ -31,7 +31,6 @@ export default function ContactPage() {
           <strong>Instagram</strong>
             </a>
         </p>
-
       </div>
     </div>
   );
