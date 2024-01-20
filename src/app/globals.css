@@ -13,7 +13,7 @@
 /* Dark mode styles */
 .dark {
   --foreground-color: #fff; /* White */
-  --background-color: #2d3748; /* Navy Blue - for dark mode background */
+  --background-color: #000000; /* Navy Blue - for dark mode background */
   --h1-text-color: #63b3ed; /* Light Sky Blue - for dark mode H1 text */
 }
 

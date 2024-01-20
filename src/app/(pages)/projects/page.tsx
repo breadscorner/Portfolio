@@ -10,10 +10,11 @@ export const metadata: Metadata = {
 };
 
 export default function Projects() {
+  const isDesktop = true; // Set to true for desktop view, false for mobile view
 
   return (
-<div>
-  <ProjectServerSide />
-</div>
+    <div>
+      <ProjectServerSide isDesktop={isDesktop} />
+    </div>
   );
 }
