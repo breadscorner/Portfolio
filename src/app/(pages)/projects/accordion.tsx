@@ -36,11 +36,6 @@ const Accordion: React.FC<AccordionProps> = ({
     setIsOpen(isInitiallyOpen);
   }, [isInitiallyOpen]);
 
-  useEffect(() => {
-    // Handle initial open state when the component mounts
-    setIsOpen(isInitiallyOpen);
-  }, [isInitiallyOpen]); // Empty dependency array to ensure it runs only once on mount
-
   const toggleAccordion = () => {
     onToggle(index);
     setIsOpen(!isOpen);
@@ -74,7 +69,7 @@ const Accordion: React.FC<AccordionProps> = ({
         onClick={toggleAccordion}
       >
         {isOpen ? (
-          <h2 className="text-xl">{title}</h2> // Display title if accordion is open
+          <h2 className="text-xl">{title}</h2>
         ) : (
           <div
             className="svg-icon w-8 h-8 text-white"
