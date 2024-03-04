@@ -6,14 +6,14 @@ import Layout from "../layout";
 import { Metadata } from 'next';
 
 // Move to layout but import as server side comp
-// export const metadata: Metadata = {
-//   title: {
-//     template: 'Brett Gill | %',
-//     default: 'Portfolio',
-//   },
-//   description: 'The Portfolio of Brett Gill',
-//   metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
-// };
+export const metadata: Metadata = {
+  title: {
+    template: 'Brett Gill | %',
+    default: 'Portfolio',
+  },
+  description: 'The Portfolio of Brett Gill',
+  metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+};
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
